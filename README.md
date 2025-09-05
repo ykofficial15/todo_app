@@ -1,16 +1,51 @@
-# todo_app
+# Flutter Todo App Assignment
 
-A new Flutter project.
+This is a **Flutter Todo App** assignment given by **Sunrise Digital, Bangalore**.
+
+The app allows users to:
+
+- **Create Todos**  
+- **Update Todos**  
+- **Delete Todos**  
+
+Additionally, the project includes:
+
+- Implementation of **Widgets and Unit Tests**  
+- Clean and organized **Flutter architecture**
+
+---
+
+## Screenshots
+
+### Home Screen
+![Screenshot 1](assets/images/1.png)
+
+### Add Todo Screen
+![Screenshot 2](assets/images/2.png)
+
+### Update Todo Screen
+![Screenshot 3](assets/images/3.png)
+
+### Todo List Screen
+![Screenshot 4](assets/images/4.png)
+
+### Test Results / Additional Screen
+![Screenshot 5](assets/images/5.png)
+
+---
+
+## Features
+
+- **Add Todo:** Add new tasks with title and description.  
+- **Update Todo:** Modify existing tasks.  
+- **Delete Todo:** Remove tasks you no longer need.  
+- **Unit Tests & Widget Tests:** Ensures the app works as expected.  
+
+---
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+1. **Clone the repository**
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```bash
+git clone <your-repo-url>
