@@ -18,19 +18,19 @@ Additionally, the project includes:
 ## Screenshots
 
 ### Home Screen
-![Screenshot 1](assets/images/1.png)
+![Screenshot 1](assets/1.png)
 
 ### Add Todo Screen
-![Screenshot 2](assets/images/2.png)
+![Screenshot 2](assets/2.png)
 
 ### Update Todo Screen
-![Screenshot 3](assets/images/3.png)
+![Screenshot 3](assets/3.png)
 
 ### Todo List Screen
-![Screenshot 4](assets/images/4.png)
+![Screenshot 4](assets/4.png)
 
 ### Test Results / Additional Screen
-![Screenshot 5](assets/images/5.png)
+![Screenshot 5](assets/5.png)
 
 ---
 
