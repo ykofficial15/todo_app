@@ -23,7 +23,7 @@ jobs:
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.22.0'   # <-- set your Flutter version
+          flutter-version: '3.29.3'   # <-- set your Flutter version
           channel: stable
 
       # Get dependencies
@@ -33,3 +33,7 @@ jobs:
       # Run only your unit tests
       - name: Run unit tests
         run: flutter test test/unit_test.dart
+      
+      # Prepare build
+      - name: Build apk
+        run: flutter build apk
