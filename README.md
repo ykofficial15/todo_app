@@ -17,19 +17,19 @@ Additionally, the project includes:
 
 ## Screenshots
 
-### Home Screen
+### Splash Screen
 ![Screenshot 1](assets/1.png)
 
 ### Add Todo Screen
 ![Screenshot 2](assets/2.png)
 
-### Update Todo Screen
+### View Todo Screen
 ![Screenshot 3](assets/3.png)
 
-### Todo List Screen
+### Mark Todo List Screen
 ![Screenshot 4](assets/4.png)
 
-### Test Results / Additional Screen
+### Delete Todo Screen
 ![Screenshot 5](assets/5.png)
 
 ---
