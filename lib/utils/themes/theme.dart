@@ -28,4 +28,13 @@ final theme = ThemeData(
     selectionColor: AppColor.primary.withValues(alpha: 0.2),
     selectionHandleColor: AppColor.primary,
   ),
+  elevatedButtonTheme: ElevatedButtonThemeData(
+    style: ButtonStyle(
+      foregroundColor: WidgetStatePropertyAll(AppColor.whiteColor),
+      backgroundColor: WidgetStatePropertyAll(AppColor.primary),
+    ),
+  ),
+  textButtonTheme: TextButtonThemeData(
+    style: ButtonStyle(foregroundColor: WidgetStatePropertyAll(Colors.grey)),
+  ),
 );

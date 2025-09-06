@@ -62,6 +62,7 @@ class TodoRepo {
   }
 
   Future<List<Map<String, dynamic>>> getTodosByDate(DateTime date) async {
+    _db = await _initDb();
     final db = await database;
     final start = DateTime(date.year, date.month, date.day);
     final end = start.add(const Duration(days: 1));

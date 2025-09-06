@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:path/path.dart';
+import 'package:sqflite_common_ffi/sqflite_ffi.dart';
+import 'package:todo_app/bloc/todo_bloc/todo_cubit.dart';
 import 'package:todo_app/bloc/update_date_cubit.dart';
 import 'package:todo_app/utils/themes/color.dart';
 import 'package:todo_app/utils/widgets/animated_background.dart';
@@ -27,12 +30,57 @@ class TodoScreen extends StatelessWidget {
             slivers: [
               SliverAppBar(
                 actions: [
-                  Icon(
-                    Icons.local_fire_department,
-                    size: 35,
-                    color: AppColor.whiteColor.withValues(alpha: 0.7),
+                  IconButton(
+                    onPressed: () {
+                      showDialog(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return AlertDialog(
+                            backgroundColor: AppColor.whiteColor,
+                            title: Text(
+                              'Delete Database',
+                              style: GoogleFonts.poppins(fontSize: 18),
+                            ),
+                            content: Text(
+                              'Are you sure wants to delete all todos',
+                              style: GoogleFonts.poppins(
+                                color: AppColor.primary,
+                              ),
+                            ),
+                            actions: [
+                              TextButton(
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                },
+                                child: Text('No'),
+                              ),
+                              ElevatedButton(
+                                onPressed: () async {
+                                  var databasesPath = await getDatabasesPath();
+                                  String path = join(databasesPath, 'todo.db');
+                                  await deleteDatabase(path);
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    SnackBar(content: Text("All data erased")),
+                                  );
+                                  Navigator.pop(context);
+                                  context.read<TodoCubit>().fetchTodosByDate(
+                                    DateTime.now(),
+                                  );
+                                },
+                                child: Text('Yes'),
+                              ),
+                            ],
+                          );
+                        },
+                      );
+                    },
+                    icon: Icon(
+                      Icons.local_fire_department,
+                      size: 35,
+                      color: AppColor.whiteColor.withValues(alpha: 0.7),
+                    ),
                   ),
-                  SizedBox(width: 12),
+                  SizedBox(width: 10),
                 ],
                 pinned: true,
                 stretch: true,
